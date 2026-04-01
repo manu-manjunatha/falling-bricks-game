@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Falling Bricks</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<div class="container">
+    <h1>🧱 Falling Bricks</h1>
+
+    <canvas id="gameCanvas" width="300" height="600"></canvas>
+
+    <div class="side-panel">
+        <h2>Score</h2>
+        <p id="score">0</p>
+
+        <p id="status">Connecting...</p>
+
+        <button id="startBtn" disabled>Start</button>
+        <button id="restartBtn">Restart</button>
+        <button id="pauseBtn">Pause</button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/stompjs/lib/stomp.min.js"></script>
+<script src="game.js"></script>
+
+</body>
+</html>

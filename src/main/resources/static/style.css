@@ -1,0 +1,80 @@
+/* Reset + prevent scrollbars */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* removes BOTH horizontal & vertical scroll */
+
+    background: #0f172a;
+    color: white;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    gap: 20px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+/* Canvas */
+canvas {
+    background: #020617;
+    border: 3px solid #38bdf8;
+    box-shadow: 0 0 20px #38bdf8;
+
+    width: 300px;
+    height: 600px;
+}
+
+/* Side panel (keep to the right) */
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 150px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+
+    background: #38bdf8;
+    color: black;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+button:hover:not(:disabled) {
+    transform: scale(1.05);
+    background-color: #0ea5e9;
+    box-shadow: 0 0 10px #38bdf8;
+}
+
+/* Disabled */
+button:disabled {
+    background-color: #64748b;
+    color: #e2e8f0;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    opacity: 0.7;
+}
+
+/* Full width buttons */
+.side-panel button {
+    width: 100%;
+}
